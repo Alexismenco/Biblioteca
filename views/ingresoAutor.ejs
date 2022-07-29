@@ -1,0 +1,21 @@
+<%- include ("./partials/cabecera") %> 
+<%- include ("./partials/navbar") %> 
+
+<div class="text-center">
+
+    <h1>Agregar  un autor</h1>
+
+        <form action="agregarautor" method="post">
+            <label for="">Nombre del autor</label> <br>
+            <input type="text" name="nombre" id="nombre"><br><br>
+            <label for="">Fecha Nacimiento</label> <br>
+            <input type="text" name="nacimiento" id="edicion"><br><br>
+            <label for="">Nacionalidad</label> <br>
+            <input type="text" name="nacionalidad" id="paginas"><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+</div>
+
+<%- include ("./partials/footer") %> 
+<%- include ("./partials/pie") %> 

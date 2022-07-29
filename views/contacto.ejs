@@ -1,0 +1,21 @@
+<%- include ("./partials/cabecera") %> 
+<%- include ("./partials/navbar") %> 
+
+<h1>Contacto</h1>
+
+<form action="/enviarcontacto" method="post">
+    Nombre:
+    <input type="text" name="nombre">
+    <br><br>
+    email:
+    <input type="text" name="correo">
+    <br><br>
+    Comentario:
+    <br>
+    <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+    <br><br>
+    <input type="submit" value="Enviar">
+
+</form>
+<%- include ("./partials/footer") %> 
+<%- include ("./partials/pie") %> 
