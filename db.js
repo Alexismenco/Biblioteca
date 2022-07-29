@@ -8,6 +8,8 @@ const configuracion={
     password:process.env.PGPASSWORD
 }
 
-const conexion = new Pool(configuracion)
+const conexion = new Pool({
+    connectionString:process.env.DATABASE_URL
+})
 
 module.exports={conexion}
