@@ -1,7 +1,6 @@
 {
   "name": "proyecto2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +17,14 @@
     "nodemailer": "^6.7.7",
     "nodemon": "^2.0.19",
     "pg": "^8.7.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexismenco/Biblioteca.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alexismenco/Biblioteca/issues"
+  },
+  "homepage": "https://github.com/Alexismenco/Biblioteca#readme",
+  "description": ""
 }
