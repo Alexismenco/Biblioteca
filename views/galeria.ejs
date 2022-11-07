@@ -1,14 +1,13 @@
 <%- include ("./partials/cabecera") %> 
-<%- include ("./partials/navbar") %> 
+<%- rolAdmin!=false?include("./partials/navbar"):include("./partials/navbarUser")%> 
 
-<h1 class="text-center"> Galeria de libros</h1>
+<h1 class="text-center text-info mt-5 mb-4 "><b>Libros disponibles</b></h1>
 
-<div class=" w-75 container text-center">
+<div class=" w-75 container text-center mt-5">
     <div class="row row-cols-auto">
         <% for(i=0;i< libros.length; i++){ %>
             <div class="col" style="margin-bottom: 20px;">
-                
-                <%- include ("./partials/card",libros[i]) %> 
+                <%- rolAdmin!=false?include("./partials/cardAdmin",libros[i]):include("./partials/card",libros[i])%> 
             </div>
         <% } %>
     </div>

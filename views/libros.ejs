@@ -1,18 +1,79 @@
 <%- include ("./partials/cabecera") %> 
 <%- include ("./partials/navbar") %> 
 <div class="text-center">
+    <form action="/update/<%=libro.Id  %>"  method="post" enctype="multipart/form-data"  class="container mt-5 w-50">
 
-    <h1><%=Libro  %> </h1>
-    <img src="<%= ruta %> " alt="" height="600px">
-    <br><br>
-    <h3><%= "Autor: "+Autor %></h3>
-    <h3><%= "Año de edición: "+Edicion %> </h3>
-    <h3> <%= "Editorial: "+Editorial %> </h3>
-    <h5> <%= "Número paginas: "+Paginas %> </h5>
-    <h5> <%=  "Idioma: "+Idioma %> </h5>
-    <p> <%= "Resumen: "+Resumen %> </p>
-    <br><br>
-    <a class="btn btn-primary" href="/galeria" role="button" >Volver</a>
+        <section class="form-group mt-3 text-info">
+            <label for="usuario">Libro</label>
+            <input name="libro" type="text" class="form-control mt-2 bg-dark text-info"value="<%=libro.Libro  %> ">
+        </section>
+
+        <img class="mt-3" src="<%= libro.ruta %> " alt="" height="600px">
+        <section class="form-group mt-3 text-info">
+            <label for="usuario">Seleccionar imagen</label>
+            <input name="imagen" type="file" class="form-control mt-2 bg-dark text-info" >
+        </section>
+        
+        <br><br>
+
+        <b><label class="text-info" for="">Selecciona autor </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="autor" id="autor">
+            <% for(i=0;i<autores.length;i++){ %> 
+                <option value="<%= autores[i].Id  %>"> <%= autores[i].Nombre==libro.Autor?autores[i].Nombre:autores[i].Nombre %>  </option>></option>
+            <% } %> 
+        </select>
+
+        <section class="form-group mt-3 text-info">
+        <b><label class="text-info" for="">Paginas </label></b>
+
+            <input type="text" name="Paginas" class="form-control mt-2 bg-dark text-info"  value="<%=libro.Paginas  %> ">
+        </section>
+        
+        <b><label class="text-info mt-3" for="">Selecciona idioma </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="idioma" id="idioma">
+            <% for(i=0;i<idiomas.length;i++){ %> 
+                <option value="<%= idiomas[i].Id  %>"> <%= idiomas[i].Nombre %>  </option>
+            <% } %> 
+        </select>
+     
+        <section class="form-group mt-3 text-info">
+            <b><label class="text-info" for="">Edición </label></b>
+
+            <input name="Edicion" type="text" class="form-control mt-2 bg-dark text-info" value="<%=libro.Edicion  %> " >
+        </section>
+
+        <b><label class="text-info mt-3" for="">Selecciona género </label></b>
+        <select class="form-control bg-dark text-info mt-2 " name="Genero" id="genero">
+            
+            <% for(i=0;i<generos.length;i++){ %> 
+                <option name="Genero" value="<%= generos[i].Id %>"> <%= generos[i].Nombre %>  </option>
+            <% } %> 
+        </select>
+        
+        <b><label class="text-info mt-3" for="">Selecciona Editorial </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="Editorial" id="editorial">
+
+            <% for(i=0;i<editoriales.length;i++){ %> 
+                <option  value="<%= editoriales[i].Id  %>"> <%= editoriales[i].Nombre %>  </option>
+            <% } %> 
+        </select>
+       
+        <section class="form-group mt-3 text-info">
+            <label for="usuario"><b>Resumen</b></label>
+            <textarea type="text" name="Resumen" class="form-control mt-3 bg-dark text-info">
+                <%=libro.Resumen %>
+            </textarea>
+        </section>
+
+        
+        <br><br>
+        <a class="btn btn-primary" href="/galeria" role="button" >Volver</a>
+ 
+        <input type="submit" class="btn btn-info" value="Guardar">
+
+
+
+    </form>
 </div>
 <%- include ("./partials/footer") %> 
 <%- include ("./partials/pie") %> 

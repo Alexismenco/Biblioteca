@@ -1,20 +1,20 @@
 <%- include ("./partials/cabecera") %> 
-<%- include ("./partials/navbar") %> 
+<%- rolAdmin!=false?include("./partials/navbar"):include("./partials/navbarUser")%> 
 
-<h1>Contacto</h1>
+<h1 class="h3 mb-3 fw-normal text-center mt-5 text-info"><b>Contactar</b></h1>
 
-<form action="/enviarcontacto" method="post">
-    Nombre:
-    <input type="text" name="nombre">
+<form  class="container col-3 text-center mt-5 " action="/enviarcontacto" method="post">
+    <span class="text-info">Nombre</span><span class="text-danger">*</span>
+    <input placeholder="Ether" class="form-control mt-2 bg-dark text-info" type="text" name="nombre" required>
     <br><br>
-    email:
-    <input type="text" name="correo">
+    <span class="text-info">Email</span><span class="text-danger">*</span>
+    <input placeholder="ether@gmail.com" class="form-control mt-2  bg-dark text-info " type="text" name="correo" required>
     <br><br>
-    Comentario:
+    <span class="text-info">Comentario</span><span class="text-danger">*</span>
     <br>
-    <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+    <textarea placeholder="Escribe tu mensaje..." class="form-control mt-2  bg-dark text-info"  name="comentario" id="" cols="30" rows="10" required></textarea>
     <br><br>
-    <input type="submit" value="Enviar">
+    <input class="btn btn-info" type="submit" value="Enviar">
 
 </form>
 <%- include ("./partials/footer") %> 

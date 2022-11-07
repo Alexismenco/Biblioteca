@@ -1,0 +1,27 @@
+<%- include ("./partials/cabecera") %> 
+<%- rolAdmin!=false?include("./partials/navbar"):include("./partials/navbarUser")%> 
+<div class="text-center mt-5 mb-5">
+
+    <form class="container col-3 mt-5" action="/login" method="post">
+        <img class="mb-4" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal text-info">Iniciar sesión</h1>
+       
+    
+        <div class="form-floating text-dark mt-5">
+          <input type="email" name="email" class="form-control" placeholder="name@example.com">
+          <label for="floatingInput" class="">Email</label>
+        </div>
+        <div class="form-floating mt-4 text-dark">
+          <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <div class="checkbox mb-3">
+    
+        </div>
+        <button class="w-100 mt-4 btn btn-lg btn-info" type="submit">Iniciar sesión</button>
+       
+      </form>
+</div>
+<%- include ("./partials/footer") %> 
+<%- include ("./partials/pie") %> 

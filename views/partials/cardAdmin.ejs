@@ -2,8 +2,9 @@
     <img src="<%= ruta %>" class="card-img-top" alt="..." height="400px">
     <div class="card-body">
       <h5 class="card-title"><%=Libro%></h5>
-      <p class="card-text"> Autor: <%= Autor %> </p>
+      <p class="card-text"><%= Autor %> </p>
       <p class="card-text"><%= Edicion %> </p>
-      <a href="/libro/<%=Id %> " class="btn btn-primary m-2">Ver más...</a>
+      <a href="/libros/<%=Id %> " class="btn btn-primary m-2">Editar</a>
+      <a href="/eliminar/<%=Id %> " class="btn btn-danger m-2">Eliminar</a>
     </div>
   </div>

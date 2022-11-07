@@ -1,47 +1,47 @@
 <%- include ("./partials/cabecera") %> 
 <%- include ("./partials/navbar") %> 
 
-<div class="text-center">
+<div class="text-center mt-5">
 
-    <h1>Agregar Libros</h1>
+    <h1><b class="text-info">Agregar Libros</b></h1>
 
 
-    <form action="/agregarLibro" method="post" enctype="multipart/form-data">
-        <b><label for="">Autor: </label></b>
-        <select name="autor" id="autor">
+    <form action="/agregarLibro" class="container w-50 mt-5" method="post" enctype="multipart/form-data">
+        <b><label class="text-info" for="">Autor: </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="autor" id="autor">
             <% for(i=0;i<autores.length;i++){ %> 
                 <option value="<%= autores[i].Id  %>"> <%= autores[i].Nombre %>  </option>></option>
             <% } %> 
         </select>
         <br><br>
-        <b><label for="">Género: </label></b>
-        <select name="genero" id="genero">
+        <b><label class="text-info" for="">Género: </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="genero" id="genero">
             <% for(i=0;i<generos.length;i++){ %> 
                 <option value="<%= generos[i].Id %>"> <%= generos[i].Nombre %>  </option>></option>
             <% } %> 
         </select>
         <br><br>
-        <b><label for="">Editorial: </label></b>
-        <select name="editorial" id="editorial">
+        <b><label class="text-info" for="">Editorial: </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="editorial" id="editorial">
             <% for(i=0;i<editoriales.length;i++){ %> 
-                <option value="<%= editoriales[i].Id  %>"> <%= editoriales[i].Nombre %>  </option>></option>
+                <option  value="<%= editoriales[i].Id  %>"> <%= editoriales[i].Nombre %>  </option>
             <% } %> 
         </select>
         <br><br>
-        <b><label for="">Idioma: </label></b>
-        <select name="idioma" id="idioma">
+        <b><label class="text-info" for="">Idioma: </label></b>
+        <select class="form-control bg-dark text-info mt-2" name="idioma" id="idioma">
             <% for(i=0;i<idiomas.length;i++){ %> 
-                <option value="<%= idiomas[i].Id  %>"> <%= idiomas[i].Nombre %>  </option>></option>
+                <option value="<%= idiomas[i].Id  %>"> <%= idiomas[i].Nombre %>  </option>
             <% } %> 
         </select>
         <br><br>
-        <b> Nombre del libro: </b><input type="text" name="nombre" id="nombre" placeholder="Harry potter"><br><br>
-        <b> Año edición: </b> <input type="text" name="edicion" id="edicion" placeholder="2000"><br><br>
-        <b> Páginas: </b> <input type="text" name="paginas" id="paginas" placeholder="400"><br><br>
-        <b> Imagen: </b> <input type="file" name="imagen" id="imagen"><br><br>
-        <b> Resumen </b> <br> <textarea name="resumen" id="resumen" cols="50" rows="10" placeholder="Escribe un breve resumen del libro"></textarea><br><br>
-        
-        <input type="submit" value="Enviar">
+        <b class="text-info"> Nombre del libro: </b><input type="text" class="form-control bg-dark text-info mt-2" name="nombre" id="nombre" placeholder="Harry potter"><br><br>
+        <b class="text-info"> Año edición: </b> <input type="text" class="form-control bg-dark text-info mt-2" name="edicion" id="edicion" placeholder="2000"><br><br>
+        <b class="text-info"> Páginas: </b> <input type="text"  class="form-control bg-dark text-info mt-2"name="paginas" id="paginas" placeholder="400"><br><br>
+        <b class="text-info"> Imagen: </b> <input type="file" class="form-control bg-dark text-info mt-2" name="imagen" id="imagen"><br><br>
+        <b class="text-info"> Resumen </b> <br> <textarea  class="form-control bg-dark text-info mt-2" name="resumen" id="resumen" cols="50" rows="10" placeholder="Escribe un breve resumen del libro"></textarea><br><br>
+         
+        <input type="submit" class="btn btn-info" value="Enviar">
     </form>
 </div>
 <%- include ("./partials/footer") %> 

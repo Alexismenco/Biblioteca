@@ -1,19 +1,19 @@
 <%- include ("./partials/cabecera") %> 
 <%- include ("./partials/navbar") %> 
 
-<div class="text-center">
+<div class="text-center mt-5" >
 
-    <h1>Agregar  un autor</h1>
+    <h1><b class="text-info">Agrega un autor</b></h1>
 
-        <form action="agregarautor" method="post">
-            <label for="">Nombre del autor</label> <br>
-            <input type="text" name="nombre" id="nombre"><br><br>
-            <label for="">Fecha Nacimiento</label> <br>
-            <input type="text" name="nacimiento" id="edicion"><br><br>
-            <label for="">Nacionalidad</label> <br>
-            <input type="text" name="nacionalidad" id="paginas"><br><br>
+        <form action="agregarautor"  class="w-25 container col-3 mt-5" method="post">
+            <label class="text-info" for="">Nombre del autor</label> <br>
+            <input  class="form-control bg-dark text-info mt-2" placeholder="Alexis Mer" type="text" name="nombre" id="nombre"><br><br>
+            <label class="text-info" for="">Fecha Nacimiento</label> <br>
+            <input class="form-control bg-dark text-info mt-2"  type="text" placeholder="1997-02-23" name="nacimiento" id="edicion"><br><br>
+            <label class="text-info" for="">Nacionalidad</label> <br>
+            <input class="form-control bg-dark text-info mt-2" type="text" name="nacionalidad" placeholder="Chile" id="paginas"><br><br>
 
-            <input type="submit" value="Enviar">
+            <input class="btn btn-info" type="submit" value="Enviar">
         </form>
 </div>
 
